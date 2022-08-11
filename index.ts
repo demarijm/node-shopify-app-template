@@ -17,6 +17,6 @@ app.listen(port, () => {
   });
 
   
-  app.get('/', function (req, res) {
-    res.status(200).send('hello from root');
+  app.get('/', function (_req: any, res: any) {
+    res.status(200).send('Happy Coding!');
   })

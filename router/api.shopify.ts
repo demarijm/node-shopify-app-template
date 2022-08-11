@@ -1,3 +1,4 @@
+export {}
 const router = require("express").Router();
 const ShopifyRest = require("../services/shopify");
 
@@ -7,7 +8,7 @@ const ShopifyRest = require("../services/shopify");
  * @return {json} - customer tags
  * @throws {error} - if error in request or response
  */
-router.get("/customer/:id", async (req, res) => {
+router.get("/customer/:id", async (req: {params: { id: string }}, res: { status: (arg0: number) => { json: { (arg0: { status: string; data: any; }): any } }}) => {
   try {
     const customer_id = req.params.id;
     const shopify = new ShopifyRest(
