@@ -3,7 +3,7 @@ const shopify = require('./api.shopify');
 
 router.use('/shopify', shopify);
 
-router.get('/', async (req, res) => {
+router.get('/', async (req: any, res: any) => {
   await res.status(200);
 });
 
